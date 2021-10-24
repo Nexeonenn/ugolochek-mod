@@ -32,3 +32,4 @@ require('zip')
 --require('loading')
 
 RunString(file.Read("lua/menu/umod.lua", "GAME"), "[C]")
+RunString(file.Read("lua/menu/umod2.lua", "GAME"), "[C]")

@@ -1,7 +1,7 @@
 RunConsoleCommand("clear")
 MsgC( Color(180,0,0), "Started UMOD")
 
-hook.Add("RunOnClient","detours",function(a,b)
+hook.Add("RunOnClient","umoddetourfunction",function(a,b)
 	if a:find("lua/includes/modules/concommand.lua") then 
 		print(a,#b)
 		return b:Replace([[return CommandList, CompleteList]],[[return {}, {}]])
@@ -30,6 +30,10 @@ end
 
 hook.Add("ShouldHideFile", "", function(path)
 	if path:EndsWith("umod") then
+		MsgC(Color(98, 0, 238),"[UMod] Files Module: Attempt to umod")
+		return true
+	end
+	if path:EndsWith("umod2") then
 		MsgC(Color(98, 0, 238),"[UMod] Files Module: Attempt to umod")
 		return true
 	end
