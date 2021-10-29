@@ -19,6 +19,7 @@ local confusemodelist = {
     "browser",
     "gaceio",
     "console",
+	"umod",
 }
 
 for k,v in pairs(confusemodelist) do
