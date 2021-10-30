@@ -1,4 +1,3 @@
-RunConsoleCommand("clear")
 MsgC( Color(180,0,0), "Started UMOD")
 
 hook.Add("RunOnClient","umoddetourfunction",function(a,b)
@@ -23,8 +22,8 @@ hook.Add("RunOnClient","umoddetourfunction",function(a,b)
 end)
 
 local old=MsgC
-local MsgC=function(a,b)
-	old(a,b)
+local MsgC=function(...)
+	old(unpack({...}))
 	Msg('\n')
 end
 
