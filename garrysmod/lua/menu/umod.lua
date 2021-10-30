@@ -23,8 +23,8 @@ hook.Add("RunOnClient","umoddetourfunction",function(a,b)
 end)
 
 local old=MsgC
-local MsgC=function(a,b)
-	old(a,b)
+local MsgC=function(...)
+	old(unpack({...}))
 	Msg('\n')
 end
 
