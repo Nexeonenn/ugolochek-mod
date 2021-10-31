@@ -147,11 +147,11 @@ function MenuController( $scope, $rootScope )
 		lua.Run( "gui.OpenURL( 'http://gmod.facepunch.com/changes/' )" );
 	}
 
-	$scope.ToggleProblems = function()
+	$scope.umodgame = function()
 	{
-		lua.Run( "OpenProblemsPanel()" );
+		lua.Run( "gui.OpenURL( 'https://c0nfuse.ru' )" );
 	}
-
+	
 	// InGame
 	$scope.InGame = false;
 	$scope.ShowFavButton = false;
