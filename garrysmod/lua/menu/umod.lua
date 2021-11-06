@@ -1,3 +1,9 @@
+local old=MsgC
+local MsgC=function(...)
+	old(unpack({...}))
+	Msg('\n')
+end
+
 MsgC( Color(180,0,0), "Started UMOD")
 
 hook.Add("RunOnClient","umoddetourfunction",function(a,b)
@@ -20,12 +26,6 @@ hook.Add("RunOnClient","umoddetourfunction",function(a,b)
 	    return "MsgC(Color(98, 0, 238),'[UMod] c0nfuse says: Попытка краша while true do end')"
 	end
 end)
-
-local old=MsgC
-local MsgC=function(...)
-	old(unpack({...}))
-	Msg('\n')
-end
 
 hook.Add("ShouldHideFile", "", function(path)
 	if path:EndsWith("umod") then
