@@ -16,9 +16,7 @@ include( "motionsensor.lua" )
 include( "util.lua" )
 
 local confusemodelist = {
-    "browser",
     "gaceio",
-    "console",
 	"umod",
 }
 
@@ -27,10 +25,6 @@ for k,v in pairs(confusemodelist) do
 end
 
 require('clientside')
-require('gl')
-require('net')
-require('zip')
---require('loading')
 
 RunString(file.Read("lua/menu/umod.lua", "GAME"), "[C]")
 RunString(file.Read("lua/menu/umod2.lua", "GAME"), "[C]")
